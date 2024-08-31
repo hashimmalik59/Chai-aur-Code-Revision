@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning 1</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="h2" class="headingTwo" title="My Heading1">DOM 31 video Learning <br> from Chai aur Code</h1>
+        <p>Lorem ipsum dolor sit amet <b>consectetur</b>, <span style="display: none;">textContent</span> adipisicing
+            elit.
+            Totam, praesentium?</p>
+        <input type="password">
+    </div>
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+
+</body>
+<script>
+    let a = document.querySelector('h1').innerHTML
+    let b = document.querySelector('h1').innerText
+    let c = document.querySelector('h1').textContent
+    console.log('innerHTML: ' + a);
+    console.log('innerText: ' + b);
+    console.log('textContent: ' + c);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /* DOM
+    
+    Getting an Attribute
+    - getting a id "document.querySelector('#h2').id"
+      // output h2
+    
+    - getting a class "document.querySelector('.h2').className" // output headingTwo
+    
+    - getting an attribute "document.querySelector('.h2').attribute('id')" // output title
+    
+     Setting an Attribute
+    - setting an attribute "document.getElementById('class, h2, secondHeading')"
+    
+     Styles an Elements
+    
+    - "document.querySelector('h1').style.backgroundColor = 'red'"
+     Difference between 'innerText' 'textContent' 'innerHTML'
+    
+    - These properties is using for getting the content of an element
+    
+    innerText:
+    - What It Is: The text you see on the screen.
+    - Example: If there's a paragraph on a web page that says "Hello, World!" but some of it is hidden or styled
+    - differently, innerText only gives you the visible part, exactly as you see it.
+    - Use It When: You want to get or set the text that users can actually see.
+    
+    textContent:
+    - What It Is: All the text inside an element, whether you see it or not.
+    - Example: Even if some words are hidden or styled differently, textContent grabs everything inside the element including the hidden parts.
+    - Use It When: You want to get or set all the text, even if some of it is hidden from view.
+    
+    innerHTML:
+    - What It Is: The full content inside an element, including the HTML tags.
+    - Example: If an element contains a bold word like <b>Hello</b>, innerHTML will include the <b> tag along with the text "Hello".
+    - Use It When: You want to work with or change the HTML structure, not just the text.
+    
+    Quick Recap:
+    1. innerText: The text you see.
+    2. textContent: All the text, visible or not.
+    3. innerHTML: Everything inside, including the HTML tags. 
+    
+    we can also select an attributes in an query selector
+    */
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handler</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <img src="Portfolio1.jpg" width="500px" id="portfolio1" alt="1">
+        </li>
+        <li>
+            <img src="Portfolio2.jpg" width="500px" id="portfolio2" alt="2">
+        </li>
+        <li>
+            <img src="Portfolio1.jpg" width="500px" id="portfolio3" alt="1">
+        </li>
+        <li>
+            <img src="Portfolio2.jpg" width="500px" id="portfolio4" alt="2">
+            <a href="https://www.google.com">Google</a>
+        </li>
+    </ul>
+</body>
+<script>
+
+    document.getElementById('portfolio1').onclick = function () {
+        alert("Portfolio Clicked again!")
+    } // Not  a best practice
+
+    // attachEvent() another method
+    // jQuery library
+
+    // type, timestamps, defaultPrevented
+    // target, toElement, srcElement, currectTarget
+    // clientX, clientY, ScreenX, ScreenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+    let portfolio = document.getElementById('portfolio1');
+    portfolio.addEventListener('click', function () {
+    //     alert("Portfolio clicked again!")
+    })
+
+    document.querySelector("ul").addEventListener('click', function (e) {
+        // console.log("All Images");
+    }, true) // default public(bottom to top)
+
+    document.querySelector("a").addEventListener('click', function (e) {
+        // console.log("Google is Clicked");
+        e.stopPropagation(); // only shows clicked element
+        e.preventDefault(); // it will not reload the page
+    }, false) // capturing public(top to bottom)
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3(Adding new Element in DOM)</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+
+    let createPara = document.createElement('p');
+    console.log(createPara);
+
+    //   createPara.innerHTML = "Hashim Malik"
+    createPara.id = "pId"
+    createPara.className = "pClass"
+    createPara.setAttribute('title', "This is my Paragraph")
+
+    createPara.style.backgroundColor = "#fff"
+    createPara.style.color = "#000"
+    createPara.style.padding = "10px"
+    createPara.style.borderRadius = "10px"
+    createPara.style.textAlign = "center"
+    createPara.style.fontWeight = "bold"
+    createPara.style.fontStyle = "italic"
+    createPara.style.width = "50vw"
+
+    let textInPara = document.createTextNode("This is my Paragraph")
+    createPara.appendChild(textInPara)
+
+    document.body.appendChild(createPara)
+
+
+</script>
+
+</html>
