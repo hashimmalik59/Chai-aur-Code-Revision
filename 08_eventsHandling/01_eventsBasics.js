@@ -3,11 +3,11 @@ let portfolio1 = document.getElementById('portfolio1');
 let portfolio2 = document.getElementById('portfolio2');
 let portfolio3 = document.getElementById('portfolio3');
 let portfolio4 = document.getElementById('portfolio4');
-console.log(ul);
-console.log(portfolio1);
-console.log(portfolio2);
-console.log(portfolio3);
-console.log(portfolio4);
+// console.log(ul);
+// console.log(portfolio1);
+// console.log(portfolio2);
+// console.log(portfolio3);
+// console.log(portfolio4);
 
 // ul.addEventListener('click', () => {
 //     console.log("ul is clicked");
@@ -52,3 +52,17 @@ link.addEventListener('click', (a) => {
 // portfolio4.addEventListener('click', () => {
 //     portfolio4.style.display = 'none'
 // })
+
+ul.addEventListener('click', (a) => {
+    if (a.target.className === 'image') {
+        let removeElement = a.target.parentNode
+        removeElement.remove();
+        console.log(a.target.parentNode);
+        console.log(`this is image tag name:${a.target.tagName}`);
+        console.log(`this is image id:${a.target.id}`);
+        console.log(`this is image class:${a.target.className}`);
+        console.log(`image is clicked`);
+    } else {
+        console.log(`image not is clicked`);
+    }
+})
